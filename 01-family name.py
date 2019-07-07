@@ -1,5 +1,4 @@
 
-f = open('family name')
 family_names = ( \
     "赵","钱","孙","李","周","吴","郑","王","冯","陈","褚","卫","蒋","沈","韩","杨","朱","秦","尤","许","何","吕","施","张", \
     "孔","曹","严","华","金","魏","陶","姜","戚","谢","邹","喻","柏","水","窦","章","云","苏","潘","葛","奚","范","彭","郎", \
@@ -89,6 +88,8 @@ girls_given_words2 = ( \
     )
 
 import random
+filename = 'name.txt'
+f = open(filename,'w')
 for i in range(1,101):
     one_name = random.choice(family_names)
 #print(one_name)
@@ -107,6 +108,8 @@ for i in range(1,101):
         else:
             picked_name = random.choice(girls_given_words2)
 #print(picked_name)
-
     full_name = one_name + picked_name
     print(full_name)
+    f.write(full_name) 
+    f.write('\n')
+f.close()
