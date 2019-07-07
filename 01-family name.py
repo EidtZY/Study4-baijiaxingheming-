@@ -90,6 +90,7 @@ girls_given_words2 = ( \
 import random
 filename = 'name.txt'
 f = open(filename,'w')
+f.write('----------百家姓-----------\n')
 for i in range(1,101):
     one_name = random.choice(family_names)
 #print(one_name)
@@ -110,6 +111,6 @@ for i in range(1,101):
 #print(picked_name)
     full_name = one_name + picked_name
     print(full_name)
-    f.write(full_name) 
+    f.write(full_name)
     f.write('\n')
 f.close()
